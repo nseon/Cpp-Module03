@@ -6,7 +6,16 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:54:42 by nseon             #+#    #+#             */
-/*   Updated: 2025/10/28 14:54:44 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/07 17:52:25 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
+
+int	main()
+{
+	ClapTrap a;
+	ClapTrap b("Nico", 50, 100, 10);
+
+	b.attack(a.getName());
+}
