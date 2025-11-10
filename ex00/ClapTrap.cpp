@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:55:09 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/07 17:54:21 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/10 10:12:28 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 std::string ClapTrap::getName() const
 {
 	return (_name);
+}
+
+int ClapTrap::getAtk_dmg() const
+{
+	return (_attack_dmg);
 }

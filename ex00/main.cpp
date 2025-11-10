@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:54:42 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/07 17:52:25 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/10 15:48:21 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 int	main()
 {
 	ClapTrap a;
-	ClapTrap b("Nico", 50, 100, 10);
+	ClapTrap b("Nico", 50, 100, 7);
 
 	b.attack(a.getName());
+	a.takeDamage(static_cast<unsigned int>(b.getAtk_dmg()));
+	return (0);
 }

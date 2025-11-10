@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:55:06 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/07 17:53:47 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/10 10:12:22 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class ClapTrap {
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		std::string getName() const;
+		int getAtk_dmg() const;
 };
 
 #endif
