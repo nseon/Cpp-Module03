@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 14:54:42 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/12 13:41:52 by nseon            ###   ########.fr       */
+/*   Created: 2025/11/12 08:58:06 by nseon             #+#    #+#             */
+/*   Updated: 2025/11/12 17:29:26 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int	main()
-{
-	ClapTrap a;
-	ClapTrap b("Nico", 50, 100, 7);
+# include "ClapTrap.hpp"
 
-	for (int i = 0; i < 3; i++)
-	{
-		b.attack(a.getName());
-		a.takeDamage(static_cast<unsigned int>(b.getAtk_dmg()));
-	}
-	a.beRepaired(100);
-	return (0);
-}
+class ScavTrap: public ClapTrap {
+	public:
+		ScavTrap();
+		ScavTrap(ScavTrap &model);
+		~ScavTrap();
+		void guardGate();
+};
+
+#endif

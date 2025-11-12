@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:55:09 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/12 13:41:26 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/10 10:12:28 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,6 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::attack(const std::string& target)
 {
-	if (!_hit_pts)
-		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
 	if (_energy_pts)
 	{
 		_energy_pts -= 1;
@@ -63,18 +61,12 @@ void ClapTrap::attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	_hit_pts -= amount;
-	if (_hit_pts < 0)
-		_hit_pts = 0;
 	std::cout << "ClapTrap " << _name << " take " << amount << " damage. He now has " << _hit_pts << " hit points." << std::endl;
-	if (!_hit_pts)
-		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (!_hit_pts)
-		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
-	else if (_energy_pts)
+	if (_energy_pts)
 	{
 		_energy_pts -= 1;
 		_hit_pts += amount;
