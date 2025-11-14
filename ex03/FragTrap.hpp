@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/28 14:54:42 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/13 14:21:57 by nseon            ###   ########.fr       */
+/*   Created: 2025/11/13 10:31:06 by nseon             #+#    #+#             */
+/*   Updated: 2025/11/14 09:42:44 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int	main()
-{
-	ScavTrap a("Nico");
-	ClapTrap b("Pierre");
-	ClapTrap *c = new ScavTrap;
+# include "ClapTrap.hpp"
 
-	a.attack(b.getName());
-	b.takeDamage(static_cast<unsigned int>(a.getAtk_dmg()));
-	a.guardGate();
-	c->attack(a.getName());
-	return (0);
-}
+class FragTrap: public ClapTrap {
+	public:
+		FragTrap();
+		FragTrap(FragTrap &model);
+		FragTrap(std::string name);
+		FragTrap &operator=(FragTrap const &model);
+		~FragTrap();
+
+		void highFivesGuys(void);
+};
+
+#endif

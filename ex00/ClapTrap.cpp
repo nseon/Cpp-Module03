@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:55:09 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/12 13:41:26 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/14 10:13:10 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &model)
 		_energy_pts = model._energy_pts;
 		_hit_pts = model._hit_pts;
 	}
-	std::cout << "Fixed copy assignment operator called" << std::endl;
+	std::cout << "ClapTrap copy assignment operator called" << std::endl;
 	return (*this);
 }
 
@@ -51,7 +51,7 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (!_hit_pts)
 		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
-	if (_energy_pts)
+	else if (_energy_pts)
 	{
 		_energy_pts -= 1;
 		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attack_dmg << " points of damage!" << std::endl;

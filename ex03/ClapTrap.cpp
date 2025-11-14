@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:55:09 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/14 10:12:42 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/14 10:12:28 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (!_hit_pts)
 		std::cout << "ClapTrap " << _name << " is dead" << std::endl;
-	else if (_energy_pts)
+	if (_energy_pts)
 	{
 		_energy_pts -= 1;
 		std::cout << "ClapTrap " << _name << " attacks " << target << ", causing " << _attack_dmg << " points of damage!" << std::endl;
@@ -89,7 +89,7 @@ std::string ClapTrap::getName() const
 	return (_name);
 }
 
-int ClapTrap::getAtk_dmg() const
+unsigned int ClapTrap::getAtk_dmg() const
 {
-	return (_attack_dmg);
+	return (static_cast<unsigned int>(_attack_dmg));
 }

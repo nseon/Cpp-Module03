@@ -6,22 +6,38 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:54:42 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/13 14:21:57 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/14 10:14:50 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main()
 {
-	ScavTrap a("Nico");
-	ClapTrap b("Pierre");
-	ClapTrap *c = new ScavTrap;
+	ScavTrap Devan("Devan");
+	ClapTrap Pierre("Pierre");
+	FragTrap Nico("Nico");	
 
-	a.attack(b.getName());
-	b.takeDamage(static_cast<unsigned int>(a.getAtk_dmg()));
-	a.guardGate();
-	c->attack(a.getName());
+	std::cout << std::endl;
+	
+	for (int i = 0; i < 12; i++)
+		Pierre.attack(Nico.getName());
+	Nico.highFivesGuys();
+	std::cout << std::endl;
+	
+	for (int i = 0; i < 5; i++)
+	{
+		Devan.attack(Nico.getName());
+		Nico.takeDamage(Devan.getAtk_dmg());
+	}
+	Devan.beRepaired(50);
+	Nico.beRepaired(50);
+	Devan.guardGate();
+	std::cout << std::endl;
+
 	return (0);
 }

@@ -6,11 +6,11 @@
 #    By: nseon <nseon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 10:54:16 by nseon             #+#    #+#              #
-#    Updated: 2025/11/13 10:17:47 by nseon            ###   ########.fr        #
+#    Updated: 2025/11/14 09:57:00 by nseon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		=	scavtrap
+NAME 		=	fragtrap
 
 # ---------------FILES--------------- #
 
@@ -27,6 +27,7 @@ DEP			=	$(patsubst %.cpp, $(MAKE_DIR)%.d, $(SRC))
 SRC			=	main.cpp \
 				ClapTrap.cpp \
 				ScavTrap.cpp \
+				FragTrap.cpp \
 
 # --------------CONFIGS-------------- #
 
