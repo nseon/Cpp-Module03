@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:55:06 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/14 10:04:48 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/17 14:46:45 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ class ClapTrap {
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap &model);
 		ClapTrap &operator=(const ClapTrap &model);
-		~ClapTrap();
+		virtual ~ClapTrap();
 
-		void attack(const std::string& target);
+		virtual void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		std::string getName() const;

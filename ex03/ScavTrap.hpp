@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 08:58:06 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/13 10:19:30 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/17 14:33:23 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap {
+class ScavTrap: public virtual ClapTrap {
 	public:
 		ScavTrap();
 		ScavTrap(ScavTrap &model);

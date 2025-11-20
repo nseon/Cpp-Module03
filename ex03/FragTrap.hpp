@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 10:31:06 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/14 09:42:44 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/17 14:33:19 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class FragTrap: public ClapTrap {
+class FragTrap: public virtual ClapTrap {
 	public:
 		FragTrap();
 		FragTrap(FragTrap &model);

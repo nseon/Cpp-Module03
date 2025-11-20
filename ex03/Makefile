@@ -6,7 +6,7 @@
 #    By: nseon <nseon@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/13 10:54:16 by nseon             #+#    #+#              #
-#    Updated: 2025/11/14 10:18:28 by nseon            ###   ########.fr        #
+#    Updated: 2025/11/17 14:41:34 by nseon            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,12 @@ SRC			=	main.cpp \
 				ClapTrap.cpp \
 				ScavTrap.cpp \
 				FragTrap.cpp \
+				DiamondTrap.cpp \
 
 # --------------CONFIGS-------------- #
 
 CC			=	c++
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g3  -Weverything -Wno-suggest-override -Wno-suggest-destructor-override -Wno-padded
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g3  -Weverything -Wno-suggest-override -Wno-suggest-destructor-override -Wno-padded -Wno-shadow-field -Wno-weak-vtables
 CPPFLAGS	=	-MMD -MP $(addprefix -I, $(INCLUDES))
 
 LDFLAGS		+=	$(addprefix -L, $(dir $(LIB_PATH)))
