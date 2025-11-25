@@ -6,7 +6,7 @@
 /*   By: nseon <nseon@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:54:42 by nseon             #+#    #+#             */
-/*   Updated: 2025/11/13 14:21:57 by nseon            ###   ########.fr       */
+/*   Updated: 2025/11/25 09:05:04 by nseon            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int	main()
 	b.takeDamage(static_cast<unsigned int>(a.getAtk_dmg()));
 	a.guardGate();
 	c->attack(a.getName());
+	delete c;
 	return (0);
 }
